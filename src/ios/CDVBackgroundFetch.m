@@ -51,7 +51,8 @@
     
     self.fetchCallbackId = command.callbackId;
     
-    [app setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    // [app setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    [app setMinimumBackgroundFetchInterval:(NSTimeInterval)60*20];
     [app.delegate self];
     
     UIApplicationState state = [app applicationState];
